@@ -1,0 +1,43 @@
+$first: #ff442b;
+$second: #ff7733;
+#mainbox {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: auto 0;
+}
+#submit {           
+    width: 390px;        ;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 100;
+    line-height: 50px;
+}
+#go {
+    display: inline-block;
+    background-image: linear-gradient(120deg, $first, $second);
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+}
+.input {
+    margin-bottom: 5px;
+    width: 390px;
+    height: 50px;
+    border: none;
+    border-bottom: 1px solid #000000;
+    font-size: 16px;
+    transition: border-bottom-color 0.3s ease;
+    text-align: left;
+}
+.bottombox {
+    display: flex;
+    gap: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+}
