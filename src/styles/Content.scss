@@ -1,0 +1,129 @@
+.profilebox {
+    width: 1000px;
+    height: 300px;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 2px solid black;
+    
+}
+.leftbox {
+    width: 350px;
+    height: 300px;
+}
+.guide {
+    content: "";
+        position: static;
+        top: 0;
+        right: -1px;
+        height: 60%;
+        width: 1.5px;
+        background-color: #000;
+}
+.rightbox {
+    width: 570px;
+    height: 173px;
+    justify-content: space-evenly;
+    p {
+        font-size: 18px;
+        text-align: left;
+        font-weight: 400;
+    
+        &:first-child {
+            font-weight: bold;
+        }
+    }
+}
+.nick {
+    width: 152px;
+    height: 17px;
+}
+.item {
+    width: 82px;
+    height: 40px;
+}
+.select {
+    margin: 25px 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 10px;
+    width: 1000px;
+    height: 30px;
+    button {
+        font-size: 10px;
+        font-weight: bold;
+        padding: 5px 20px;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+    
+        &:active {
+            background: linear-gradient(100deg, #FF442B, #FF7733);;
+        }
+    }
+}
+.container-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.container-column {
+    display: flex;
+    flex-direction: column;
+}
+.conHeader {
+    width: 1000px;
+    height: 50px;
+    border-bottom: 1.5px solid black;
+    padding: 0 10px;
+    header {
+        justify-content: space-between;
+        align-items: center;
+        div {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            p {
+                font-size: 18px;
+                font-weight: bold;
+            }
+        }
+        button {
+            border: none;
+            background:none;
+            cursor: pointer;
+        }
+        span {
+           width: 34px;
+           font-size: 8px;
+           border-radius: 20px;
+           background-color: #FDE8E8;
+           color: #9B1C1C;
+           padding: 5px;
+        }
+    }
+}
+.conContainer {
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px 65px;
+    margin-top: 10px;
+}
+.conItem {
+    width: 290px;
+    height: 100px;
+    background-color: #EBEBEB;
+    border-radius: 10px;
+    div {
+        height: 100%;
+        line-height: 100px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+}

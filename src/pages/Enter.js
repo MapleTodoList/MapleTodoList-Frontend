@@ -1,5 +1,5 @@
 import React from "react";
-import "../Enter.scss"
+import "../styles/Enter.scss"
 import { Link } from "react-router-dom";
 
 const Enter = () => {

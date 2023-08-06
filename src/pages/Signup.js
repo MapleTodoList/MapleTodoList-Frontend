@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import '../Signup.scss'
-import mark from '../img/error_FILL0_wght400_GRAD0_opsz48.svg'
+import '../styles/SignupAuth.scss'
+import mark from '../assets/icons/error_FILL0_wght400_GRAD0_opsz48.svg'
 
 function Signup() {
   const [formData, setFormData] = useState({
@@ -64,7 +64,6 @@ function Signup() {
           />
           {isDuplicateID && (
             <React.Fragment>
-              {/* Apply color #FF3C11 to the SVG icon */}
               <img
                 src={mark}
                 alt="mark"
