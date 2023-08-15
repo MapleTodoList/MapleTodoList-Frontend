@@ -1,31 +1,43 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "../styles/SignupAuth.scss"
+import axios from "axios";
+import "../styles/SignupAuth.scss";
 import mushroom from "../assets/img/Maplemushroom.png";
 
 function Auth() {
     const [formData, setFormData] = useState({
-        ID:"",
-        PW:"",
-    })
+        ID: "",
+        PW: "",
+    });
 
-    const history = useNavigate()
+    const navigate = useNavigate();
 
     const handleChange = (e) => {
-        const{ name, value } = e.target
+        const { name, value } = e.target;
         setFormData({
             ...formData,
             [name]: value,
-        })
+        });
     }
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        console.log('Form data submitted:', formData)
-        if (formData.ID === "user" && formData.PW === "1111") {
-            history("/main")
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            const response = await axios.post("http://localhost:3000/auth/login", { "id": formData.ID, "password": formData.PW });
+            console.log()
+            const token = response.data.accessToken; // 서버에서 받은 토큰
+            if (token) {
+                localStorage.setItem("token", token); // 로컬 스토리지에 토큰 저장
+                console.log(localStorage.token)
+                navigate("/main"); // 페이지 이동
+            } else {
+                console.log("로그인 실패");
+            }
+        } catch (error) {
+            console.error("에러:", error);
         }
     }
+
     return (
         <div>
             <form onSubmit={handleSubmit} id="mainbox">

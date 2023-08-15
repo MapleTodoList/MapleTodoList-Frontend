@@ -11,14 +11,18 @@
         font-size: 26px;
         left: 30px;
     }
-    a {
+    button {
         line-height: 80px;
         display: flex;
         flex-direction: row;
         position: absolute;
+        align-items: center;
         gap: 3px;
         color: white;
         font-size: 18px;
+        background: none;
+        border: none;
+        cursor: pointer;
     }
 }
 .userid {
