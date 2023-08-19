@@ -24,8 +24,8 @@ function Auth() {
         e.preventDefault();
         try {
             const response = await axios.post("http://localhost:3000/auth/login", { "id": formData.ID, "password": formData.PW });
-            console.log()
             const token = response.data.accessToken; // 서버에서 받은 토큰
+            console.log(token)
             if (token) {
                 localStorage.setItem("token", token); // 로컬 스토리지에 토큰 저장
                 console.log(localStorage.token)

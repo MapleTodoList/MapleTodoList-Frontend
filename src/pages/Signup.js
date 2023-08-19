@@ -38,15 +38,22 @@ function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
   
-    try {
-      const response = await axios.post('http://localhost:3000/auth/register', { "id": formData.id, "username": formData.username, "email": formData.email, "password": formData.password });
-      alert('회원가입이 완료되었습니다.');
-      console.log(response.data.accessToken)
-      localStorage.setItem("token", response.data.accessToken)
-      navigate('/main')
-    } catch (error) {
-      console.error('에러:', error);
+    if (formData.password === formData.confirmPW) {
+      try {
+        const response = await axios.post('http://localhost:3000/auth/register', { "id": formData.id, "username": formData.username, "email": formData.email, "password": formData.password });
+        console.log(response.data)
+        alert('회원가입이 완료되었습니다.');
+        console.log(response.data.accessToken)
+        localStorage.setItem("token", response.data.accessToken)
+        navigate('/main')
+      } catch (error) {
+        console.error('에러:', error);
+      }
     }
+    else {
+      alert('비밀번호가 일치하지 않습니다')
+    }
+    
   }
 
   return (
