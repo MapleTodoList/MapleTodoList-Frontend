@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../styles/SignupAuth.scss";
-import mushroom from "../assets/img/Maplemushroom.png";
 
 function Auth() {
     const [formData, setFormData] = useState({
@@ -70,7 +69,6 @@ function Auth() {
                     <Link to="/Signup" id="go" style={{ textDecoration: 'none' }}>회원가입하기</Link>
                 </div>
             </form>
-            <img src={mushroom} alt="mushroom" style={{ position: "fixed", bottom: "10px", right: "10px" }} />
         </div>
     )
 }

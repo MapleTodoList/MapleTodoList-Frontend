@@ -3,7 +3,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../styles/SignupAuth.scss';
 import mark from '../assets/icons/error_FILL0_wght400_GRAD0_opsz48.svg';
-import mushroom from "../assets/img/Maplemushroom.png";
 
 function Signup() {
   const [formData, setFormData] = useState({
@@ -162,8 +161,6 @@ function Signup() {
           </Link>
         </div>
       </form>
-      <img src={mushroom} alt="mushroom"
- style={{ position: "fixed", bottom: "10px", right: "10px" }} />
     </div>
   )
 }
