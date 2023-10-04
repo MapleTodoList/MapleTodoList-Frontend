@@ -1,3 +1,5 @@
+![logo](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWVvczI4bWthcHFoaG1jM3NqZ3htN3pvZjAwMXk5OGdtc2JidTI1dCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/RJzm826vu7WbJvBtxX/giphy.gif)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
